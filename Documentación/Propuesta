@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css" crossorigin="anonymous">
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+ 
+<script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+<style>
+@charset "utf-8";
+
+/**
+ * markdown.css
+ *
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation, either version 3 of the License, or (at your option) any
+ * later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see http://gnu.org/licenses/lgpl.txt.
+ *
+ * @project      Weblog and Open Source Projects of Florian Wolters
+ * @version      GIT: $Id$
+ * @package      xhtml-css
+ * @author       Florian Wolters <florian.wolters.85@googlemail.com>
+ * @copyright    2012 Florian Wolters
+ * @cssdoc       version 1.0-pre
+ * @license      http://gnu.org/licenses/lgpl.txt GNU Lesser General Public License
+ * @link         http://github.com/FlorianWolters/jekyll-bootstrap-theme
+ * @media        all
+ * @valid        true
+ */
+
+img {
+	max-width: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table, th, td {
+	border: 1px solid #EAEAEA;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+tr:nth-child(even) {
+	background-color: #F8F8F8;
+}
+
+body {
+    font-family: Helvetica, Arial, Freesans, clean, sans-serif;
+    padding:1em;
+    margin:auto;
+    max-width:42em;
+    background:#fefefe;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1 {
+    color: #000000;
+    font-size: 28px;
+}
+
+h2 {
+    border-bottom: 1px solid #CCCCCC;
+    color: #000000;
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    color: #777777;
+    background-color: inherit;
+    font-size: 14px;
+}
+
+hr {
+    height: 0.2em;
+    border: 0;
+    color: #CCCCCC;
+    background-color: #CCCCCC;
+}
+
+p, blockquote, ul, ol, dl, li, table, pre {
+    margin: 15px 0;
+}
+
+code, pre {
+    border-radius: 3px;
+    background-color: #F8F8F8;
+    color: inherit;
+}
+
+code {
+    border: 1px solid #EAEAEA;
+    margin: 0 2px;
+    padding: 0 5px;
+}
+
+pre {
+    border: 1px solid #CCCCCC;
+    line-height: 1.25em;
+    overflow: auto;
+    padding: 6px 10px;
+}
+
+pre > code {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:visited {
+    color: #4183C4;
+    background-color: inherit;
+    text-decoration: none;
+}
+
+
+figure figcaption {
+    text-align: center;
+    font-size: 12px;
+}
+table.eq_table {
+	border-collapse: collapse;
+ 	border: 0;
+	width: 100%;
+}
+table.eq_table td, table.eq_table th {
+	border: 0;
+}
+table.eq_table tfoot td {
+ 	border: 0;
+}
+table.eq_table tfoot .links {
+ 	text-align: right;
+ 	border: 0;
+}
+
+td.counter {
+	text-align: right;
+	border: 0;
+}
+
+td.eq_code {
+	width: 100%;
+	border: 0;
+	text-align: center;
+}
+
+.eq_table > tr, td, th, {
+	border: 0;
+}
+
+figure {
+	width: 100%;
+	text-align: center;
+}
+
+figure figcaption {
+	text-align: center;
+	font-size: 11pt;
+}
+
+figure img {
+	max-width: 100%;
+}
+
+code {
+    font-family: monospace;
+}
+
+img {
+	max-width: 100%;
+}
+
+.authors
+{
+	text-align: center;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.authors:empty
+{
+	display: none;
+}
+
+
+.affiliation
+{
+	text-align: center;
+}
+
+.affiliation:empty
+{
+	display: none;
+}
+
+.title
+{
+	text-align: center;
+	margin-bottom: 5pt;
+}
+
+.title:empty
+{
+	display: none;
+}
+
+.header{
+  margin-bottom: 20pt;
+}
+
+.header:empty {
+   display: none;
+}
+
+.slide {
+  display: flex;
+  width: 221mm;
+  height: 166mm;
+  margin: 0 auto 20px auto;
+  padding: 0;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+.slide_169 {
+  width: 294mm;
+  height: 166mm;
+}
+
+
+.slide_body {
+  display: block;
+  width: 191mm;
+  height: 136mm;
+  margin: auto;
+  overflow: hidden;
+}
+
+
+.slide_169 > .slide_body {
+  width: 264mm;
+}
+
+.slide figure {
+  width: auto;
+}
+
+.slide figcaption {
+  font-size: 14pt;
+}
+
+
+.slide_body .charter {
+ font-size: 12pt;
+ max-width: 180mm;
+}
+
+.header > .slide_body {
+    height: auto;
+}
+
+.figure > .charter {
+  margin: auto;
+}
+
+.slide_body:empty {
+  display: none;
+}
+
+.slide:empty{
+  display: none;
+}
+
+
+@media print {
+  body  {
+    margin: 0;
+    padding: 0;
+  }
+
+  .slide {
+    page-break-after: always;
+    margin: 0;
+    padding: 0;
+    width: 221mm;
+    min-height: 165.5mm;
+    height: 165.5mm;
+    max-height: 165.5mm;
+    border: none;
+    overflow: hidden;
+    border: 0;
+  }
+
+  .slide_169 {
+    width: 294mm;
+  }
+}
+
+*:not(span){
+  unicode-bidi: plaintext;
+}
+por la OSL en �
+</style>
+</head>
+<body>
+<div class="document">
+<div class="header"></div><div class="inner">
+<h2 id="toc_1">GeDiCur</h2>
+
+<ul dir="auto">
+<li>Daniel Darias Sánchez</li>
+<li><a href="mailto:alu0100783230@ull.edu.es">alu0100783230@ull.edu.es</a></li>
+</ul>
+
+<h3 id="toc_1.1">Introducción</h3>
+
+<p>El presente documento trata de establecer una propuesta de un nuevo protocolo a 
+seguir para la propuesta de cursos ofertados por la OSL / FGULL. Para ello se ha tomado como punto
+de partida el sistema empleado actualmente, basado en gran parte en formularios de 
+<em>google docs</em> y correos electrónicos individuales y se ha tratado de identificar los
+pasos claves y sus actores a fin de establecer un nuevo sistema simplificado y unificado
+que se estima repercutirá en una mayor facilidad en los trámites para todos los
+individuos implicados. Así mismo, este nuevo protocolo es acompañado de un proptotipo 
+funcional de plugin wordpress listo para su inclusión en el portal web de la OSL.</p>
+
+<p>De forma general y a modo de resumen, comenzaremos explicando en qué consiste el
+sistema de cursos de la FGULL / OSL con el objetivo de acotar el ámbito de este proyecto:</p>
+
+<ul dir="auto">
+<li><p>La Fundación General de la Universidad de La Laguna (FGULL) es una entidad cuyo objetivo es 
+servir de nexo entre la Universidad en sí y la sociedad. Entre sus tareas se encuentran
+la formación especializada, transferencia del conocimiento e investigación, 
+gestión de la innovación, formación, emprendimiento, fomento de la inserción laboral, movilidad, 
+etc. Ciñéndonos a las labores de formación, la FGULL oferta una serie de cursos en su 
+<em>catálogo formativo</em> y se encarga de la gestión de matrículas, campus virtuales, pago por
+parte de los alumnos, etc. de los mismos. </p></li>
+<li><p>La Oficina de Software Libre (OSL) es un órgano encargado de la difusión del software
+libre tanto dentro como fuera de la universidad, meta que es perseguida mediante 
+la consecución de diferentes actividades y proyectos entre los cuáles está la 
+creación de cursos sobre el uso de tecnologías libres. </p></li>
+</ul>
+
+<p>Es fácil ver pues, que la relación existente entre ambas entidades es la inclusión
+de cursos promovidos por la OSL en el catálogo generado por la FGULL. Estos cursos
+además son impartidos en las aulas que la OSL gestiona en las bibliotecas de 
+Guajara y Anchieta.</p>
+
+<p>Es pues el ámbito de aplicación de esta propuesta de mejora todos aquellos pasos desde
+el momento que un profesor/a o conjunto de los mismos deciden realizar un curso hasta 
+que este se ha terminado, los alumnos evaluados y las gestiones relacionadas con los 
+pagos han finalizado igualmente, restringido a aquellos cursos en los que la OSL también
+está implicada.</p>
+
+<h3 id="toc_1.2">Flujo de trabajo actual</h3>
+
+<p>En primera instancia, se ha estudiado el modelo actual, distinguiéndose en el mismo
+las siguientes 3 fases:</p>
+
+<ul dir="auto">
+<li>Planificación: Ataña los trámites a realizar por profesores, OSL, FGULL y otras entidades
+desde la proposición inicial de un curso hasta que se genera el enlace de matriculación
+en la FGULL.</li>
+<li>Difusión: Comprende las labores de publicidad y captación de posibles interesados en 
+asistir como alumnos de los cursos.</li>
+<li>Cierre: Identifica los pasos finales como el envío de documentación de pago y el 
+cierre de actas.</li>
+</ul>
+
+<p>A continuación se detallan estos tres puntos con la ayuda de diagramas de secuencia.</p>
+
+<h4 id="toc_1.2.1">Fase de planificación</h4>
+
+<div class="mermaid">sequenceDiagram
+    participant P as Profesor/es de curso
+    participant O as OSL
+    participant F as Fundación General ULL
+    participant V as Vicerrectorado de Docencia
+    participant A as Otras Entidades
+
+    P->>O: Cumplimentación formulario del curso
+    Note over O: Criba de cursos
+    O->>F: Envío de propuestas de cursos
+    F->>V: Envío de propuesta de cursos
+    A->>V: Envío de información adicional
+    Note over V: Generación del catálogo ECTS
+
+    Note over P: Programación del curso 
+    P->>O: Reserva de aulas
+    P->>O: Envío de memoria
+    P->>O: Envío de presupuesto
+    Note over O: Revisión
+    O->>F: Envío de memoria
+    O->>F: Envío de presupuesto
+    F->>O: Hoja de encargo
+    F->>O: Enlace de matriculación
+    O-->>F: Hoja de encargo firmada
+    O->>P: Enlace de matriculación
+    Note over O, P: Revisión del enlace de matriculación
+    Note over O, P: Decisión Realizar, Posponer o Cancelar curso
+</div>
+<h4 id="toc_1.2.2">Fase de difusión</h4>
+
+<ul dir="auto">
+<li>Publicación catálogo mensual cursos FGULL</li>
+<li>Publicación web OSL</li>
+<li>Diseño e impresión del cartel</li>
+<li>Artículo blog osl</li>
+<li>Newsletters mensuales ESIT-Informática</li>
+<li>Difusión en RRSS</li>
+<li>Envío listas de correo</li>
+<li>Charla presentación curso (en caso de que se reúnan 4 personas)</li>
+</ul>
+
+<h4 id="toc_1.2.3">Fase de cierre</h4>
+
+<div class="mermaid">sequenceDiagram
+    participant P as Profesor/es de curso
+    participant O as OSL
+    participant F as Fundación General ULL
+    
+    P->>O: Acta
+    Note over O: Firma del acta
+    P->>F: Solicitud de saldo
+    O->>F: Autorización de pago
+    P->>F: Solicitud de saldo
+    
+    alt Profesor es miembro admin pública.
+        Note over F: Generación del recibo
+        F->>O: Recibo 
+        F->>P: Recibo
+    else
+    end
+
+    P->>F: Factura / Recibo
+    O->>F: Autorización de pago
+</div>
+<h2 id="toc_2">Propuesta</h2>
+
+<p>Una vez estudiados pasos / actores implicados en el proceso, presentamos primeramente
+un listados de desventajas encontradas.</p>
+
+<ul dir="auto">
+<li>Comunicación manual entre actores. Notablemente entre Profesores, OSL y FGULL. El 
+envío de información se lleva a cabo mediante correos electrónicos.</li>
+<li>Descentralización de la información. La falta de una base de datos unificada que 
+contenga todos los cursos independientemente de su estado obliga a generar ficheros
+a mano como la web listado de cursos de la OSL. Comprobar el estado de un curso
+requiere comprobar correos.</li>
+</ul>
+
+<p>Esta propuesta pretende dar respuesta a estos problemas a través del uso de un 
+sistema unificado y el uso de formularios simplificados y consistentes que pretenden
+disminuir el tedio de los correos electrónicos manuales, permitir la visualización global
+de todos los cursos y servir de base para posibles automatizaciones futuras. 
+Se centra en los actores Profesor y OSL ya que la FGULL es una entidad aparte 
+sobre la que la OSL no tiene control.</p>
+
+<p>El sistema se basa en la definición de una serie de estados a través de los cuales
+un curso va transicionando y en cada uno de los cuáles se permite realizar una serie 
+de acciones y/o se disparan ciertos eventos.</p>
+
+<h3 id="toc_2.1">Proceso:</h3>
+
+<ol dir="auto">
+<li><p>El profesor realiza un envío inicial con información acerca del curso que quiere realizar 
+a través de un formulario generado por el plugin. 
+Esta información es categorizada en una base de datos que se consulta 
+desde el panel de administrador del plugin por parte de un miembro de 
+la OSL que actúa de <em>revisor</em>. Durante el transcurso de aprobación de un curso este 
+transiciona por diferentes estados los cuales están detallados con posterioridad en este informe. 
+El sistema informa por correo electrónico al profesor cada vez 
+que se ha avanzado un paso en la gestión hasta que el curso es finalmente 
+<code>APROBADO</code> o <code>RECHAZADO</code>.</p></li>
+<li><p>Una vez <code>APROBADO</code> el curso, este es accesible desde el panel de administración 
+del plugin en el cual puede cambiarse su <strong>estado</strong> (<em>cancelado</em>, <em>aplazado</em>, 
+<em>pendiente de cambios</em>, etc.). Las modificaciones realizadas aquí deberían 
+reflejarse en el envío de correos, tuits, etc.</p></li>
+<li><p>Un curso <code>APROBADO</code> es mostrado en la <a href="https://osl.ull.es/formacion/">web de cursos de la osl</a>
+en conjunto de su información asociada (<strong>estado</strong>, fechas de inicio y finalización, etc.).
+Desde esta sección cualquiera debería poder realizar acciones como compartir, comentar, etc.</p></li>
+<li><p>Un curso <code>RECHAZADO</code> (descartado durante la fase 1) nunca aparecerá en la web de cursos de la osl.</p></li>
+</ol>
+
+<h4 id="toc_2.1.1">Información requerida para un curso</h4>
+
+<p>Una propuesta de curso, en el momento inmediatamente anterior a ser <code>APROBADO</code> debe 
+incluir la siguiente información:</p>
+
+<table>
+<thead>
+<tr>
+<th>Info de los ponentes (una entrada por profesor) [1]</th>
+<th>Info general del curso [2]</th>
+<th>Documentos [3]</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Nombre</td>
+<td>Título</td>
+<td>Memoria [1]</td>
+</tr>
+<tr>
+<td>Apellido</td>
+<td>Descripción</td>
+<td>Presupuesto [2]</td>
+</tr>
+<tr>
+<td>DNI</td>
+<td>Número de horas</td>
+<td>Factura / Recibo [3]</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Fecha de inicio</td>
+<td></td>
+</tr>
+<tr>
+<td>Es PDI de la ULL?</td>
+<td>Fecha de finalización</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Público objetivo</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Edición previa</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_2.2">Estados de un curso</h3>
+
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Estado</th>
+<th>Información adicional</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>00</td>
+<td><code>PROPUESTA (Esperando revisión)</code></td>
+<td>Se ha enviado la información correspondiente a los puntos 1 y 2 y se espera su revisión</td>
+</tr>
+<tr>
+<td>01</td>
+<td><code>PROPUESTA (Esperando al profesor)</code></td>
+<td>Hay información correspondiente a los puntos 1 y 2 que debe ser corregida</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>PROPUESTA (Esperando al profesor)</code></td>
+<td>La información de los puntos 1 y 2 ha sido aprobada.</td>
+</tr>
+<tr>
+<td>20</td>
+<td><code>PROPUESTA (Esperando revisión)</code></td>
+<td>Los documentos 3.1 y 3.2 han sido enviados y se espera su revisión.</td>
+</tr>
+<tr>
+<td>21</td>
+<td><code>PROPUESTA (Esperando al profesor)</code></td>
+<td>Se deben realizar correcciones en los documentos 3.1 y/o 3.2</td>
+</tr>
+<tr>
+<td>30</td>
+<td><code>PROPUESTA (Esperando revisión)</code></td>
+<td>Los documentos 3.1 y 3.2 han sido aprobados. En espera del enlace de matriculación</td>
+</tr>
+<tr>
+<td>40</td>
+<td><code>APROBADO</code></td>
+<td></td>
+</tr>
+<tr>
+<td>41</td>
+<td><code>RECHAZADO</code></td>
+<td>A este estado es posible transicionar en cualquier momento del proceso de creación. Estado de muerte</td>
+</tr>
+<tr>
+<td>42</td>
+<td><code>CANCELADO</code></td>
+<td>A este estado es posible transicionar únicamente una vez se ha aprobado. Estado de muerte.</td>
+</tr>
+<tr>
+<td>43</td>
+<td><code>RETRASADO (Esperando revisión)</code></td>
+<td>Idealmente se volvería a un estado anterior como el 01 ó 21</td>
+</tr>
+<tr>
+<td>50</td>
+<td><code>FINALIZADO</code></td>
+<td>El curso se ha impartido. Estado de muerte.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Las tranciones entre estados vienen definidas por el siguiente diagrama:</p>
+
+<h4 id="toc_2.2.1">Diagrama de estados</h4>
+
+<div class="mermaid">graph TD
+    A(Inicio)
+    B(ESTADO 00)
+    C(ESTADO 01)
+    D(ESTADO 10)
+    E(ESTADO 20)
+    F(ESTADO 21)
+    G(ESTADO 30)
+    H(ESTADO 40)
+    I(ESTADO 41)
+    J(ESTADO 42)
+    K(ESTADO 43)
+    L(ESTADO 50)
+
+    B--Curso rechazado-->I
+    C--Curso rechazado-->I
+    D--Curso rechazado-->I
+    E--Curso rechazado-->I
+    F--Curso rechazado-->I
+    G--Curso rechazado-->I
+
+    A--Puntos 1 y 2 cumplimentados-->B
+    B--Info aprobada-->D
+    B--Correciones necesarias-->C
+    C--Correcciones aplicadas-->B
+    D--Documentos 3.1 y 3.2 entregados-->E
+    E--Correcciones necesarias-->F
+    E--Revisión favorable-->G
+    F--Correccines aplicadas-->E
+    G--Recepción del enlace de matriculación-->H
+    H--Curso cancelado-->J
+    H--Curso aplazado-->K
+    K--El curso tiene una nueva fecha-->F
+    H--Curso finalizado-->L
+</div>
+<h5 id="toc_2.2.1.4">Tabla de transiciones</h5>
+
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>00</th>
+<th>01</th>
+<th>10</th>
+<th>20</th>
+<th>21</th>
+<th>30</th>
+<th>40</th>
+<th>41</th>
+<th>42</th>
+<th>43</th>
+<th>50</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>00</td>
+<td></td>
+<td>xx</td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>01</td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>xx</td>
+<td>xx</td>
+<td></td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td></td>
+<td></td>
+<td></td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>xx</td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>40</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>xx</td>
+<td>xx</td>
+<td>xx</td>
+</tr>
+<tr>
+<td>41</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>42</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>43</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>xx</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="toc_2.2.2">Diagrama de secuencia, caso favorable</h4>
+
+<p>Respetando el esquema en 3 fases descrito anteriormente, distinguimos la siguiente secuencia
+de proposición y aceptación de un curso para un caso en el cual es finalmente aprobado.
+Como ya se ha dicho, las interacciones entre OSL y FGULL no pertenecen al ámbito de 
+este proyecto.</p>
+
+<div class="mermaid">sequenceDiagram
+
+    participant P as Profesor/es
+    participant S as Sistema 
+    participant R as Revisor
+    participant C as Curso
+
+    activate P
+    P->>+S: Acceso a la plataforma
+    S-->>P: Petición de información del curso  (puntos 1 y 2)
+    P->>-S: Información del curso (puntos 1 y 2)
+    S-->C: 
+
+    loop Fase de revisión 1
+        Note over C: ESTADO 00 
+        S->>R: Posible notificación
+        deactivate P
+
+        activate R
+        R-->>+S: Revisión de la información
+        deactivate R
+        alt Revisión NEGATIVA
+            S->>+P: Petición de modificación
+            S-->C: 
+            Note over C: ESTADO 01
+            P-->>S: Información corregida
+            deactivate P
+        else Revisión POSITIVA, ENDLOOP
+            S->>P: Información aprobada             
+        end     
+    end
+
+    S-->C: 
+    Note over C: ESTADO 10
+    activate P
+    P->>+S: Memoria
+    P->>S: Presupuesto
+    deactivate P
+    S-->C: 
+
+    loop Fase de revisión
+        Note over C: ESTADO 20
+        S->>R: Posible notificación
+        deactivate P
+
+        activate R
+        R-->>+S: Revisión de la información
+        deactivate R
+        alt Revisión NEGATIVA
+            S->>+P: Petición de modificación
+            S-->C: 
+            Note over C: ESTADO 21
+            P-->>S: Información corregida
+            deactivate P
+        else Revisión POSITIVA, ENDLOOP
+            S->>P: Información aprobada                         
+        end     
+    end
+
+    activate P
+    S-->C: 
+    Note over C: Estado 30
+    
+    R->>S: Enlace de matriculación
+    S->>P: Enlace de matriculación  
+
+    S-->C: 
+    Note over C: Estado 40  
+</div>
+<h3 id="toc_2.3">BBDD ejemplo</h3>
+
+<p><img src="pics/database_schema_3.png" alt=""></p>
+
+<ul dir="auto">
+<li><p>Los cursos en fase de aprobación tienen entradas en las tablas <em>curso</em>, 
+<em>profesor_curso</em>, <em>profesor</em> y <em>curso_temp_data</em>. Una vez el curso es <code>APROBADO</code>
+y la información temporal ya no es necesaria desaparece su entrada en la 
+tabla <em>curso_temp_data</em>. </p></li>
+<li><p>Mientras el curso permanece en un estado de <code>PROPUESTA</code> las entradas en 
+<em>curso_temp_data</em> contienen la retroalimentación hecha por parte de la OSL.
+En caso de concurrir en un estado final diferente a <code>APROBADO</code> (<code>RECHAZADO</code>, <code>APLAZADO</code> o 
+<code>CANCELADO</code>) contendrá el motivo del mismo.</p></li>
+<li><p>La reedición de cursos se contempla mediante la columna <code>previous_edition</code> 
+de la tabla <em>cursos</em> que permanece a NULL para la primera (o única) edición de 
+un curso y señala a la edición inmediatamente anterior en el resto de casos.</p></li>
+</ul>
+
+<h3 id="toc_2.4">Mockups</h3>
+
+<p><img src="pics/mockup_front_teacher_2.png" alt=""></p>
+
+<p><img src="pics/mockup_revisor.png" alt=""></p>
+
+<h2 id="toc_3">Todo</h2>
+
+<ul dir="auto">
+<li>Autenticación usuario wordpress</li>
+<li>Incidencias: correo electrónicos a <a href="mailto:osl.soporte@soporte.ull.es">osl.soporte@soporte.ull.es</a> [Curso]</li>
+<li>Diferencia formación para alumnos/externos y para profesorado</li>
+</ul>
+</div>
+</div>
+<script>renderMathInElement(document.body);</script>
+ 
+<script>mermaid.initialize({startOnLoad:true});</script>
+</body>
+</html>
